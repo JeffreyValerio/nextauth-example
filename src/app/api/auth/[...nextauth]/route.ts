@@ -9,7 +9,6 @@ interface userSession {
 }
 
 export const handler = NextAuth({
-    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         GithubProvider({
             clientId: process.env.GITHUB_ID as string,
@@ -20,6 +19,7 @@ export const handler = NextAuth({
             clientSecret: process.env.GOOGLE_SECRET as string
         })
     ],
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async jwt({ token, account, profile, trigger, isNewUser, session }: any) {
 
