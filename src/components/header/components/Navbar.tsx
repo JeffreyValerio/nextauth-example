@@ -10,14 +10,14 @@ const Navbar = () => {
     const user: any = session?.data?.user
 
     return (
-        <div className="grid grid-cols-4 justify-between items-center">
-            <div className="col-start-1 col-end-2 flex items-center gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 justify-between items-center gap-4">
+            <div className="justify-center md:justify-start col-start-1 col-end-2 md:col-start-1 md:col-end-2 flex items-center gap-4">
                 <Link href={'/'}>
                     <Image src={'/logo.png'} width={50} height={50} alt='The NEXTAUTH logo' />
                 </Link>
             </div>
 
-            <div className='col-start-2 col-end-4 text-center'>
+            <div className='justify-center col-start-1 col-end-2 md:col-start-2 md:col-end-4 text-center'>
                 <ul className='flex gap-4 justify-center'>
                     <li><Link href={'/'}>Homepage</Link></li>
                     <li><Link href={'/public-url'}>Public URL</Link></li>
@@ -25,7 +25,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="col-start-4 col-end-5 flex gap-4 items-center justify-end">
+            <div className="justify-center col-start-1 col-end-2 md:col-start-4 md:col-end-5 flex gap-4 items-center md:justify-end">
                 {!user ? (
                     <>
                         <Link href={'/api/auth/signin'}>Iniciar sesión</Link>
