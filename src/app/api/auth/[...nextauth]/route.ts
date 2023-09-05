@@ -24,7 +24,7 @@ export const handler = NextAuth({
             console.log({ session, token, user })
             return session
         }
-    }
+    },
 })
 
 export { handler as GET, handler as POST }

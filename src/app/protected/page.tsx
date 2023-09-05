@@ -7,7 +7,7 @@ const ProtectedPage = async () => {
     const session: any = await getServerSession(authOptions)
 
     return (
-        <div className="max-w-[1280px] mx-auto py-10">
+        <div className="max-w-[1280px] mx-auto py-10 px-4">
             {session
                 ? (
                     <>

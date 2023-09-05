@@ -22,6 +22,7 @@ const Navbar = () => {
                     <li><Link href={'/'}>Homepage</Link></li>
                     <li><Link href={'/public-url'}>Public URL</Link></li>
                     <li><Link href={'/protected'}>Protected URL</Link></li>
+                    <li><Link href={'/middleware'}>Middleware</Link></li>
                 </ul>
             </div>
 
