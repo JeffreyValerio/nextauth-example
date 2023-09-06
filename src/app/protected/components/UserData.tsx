@@ -7,12 +7,12 @@ const UserData = () => {
     const data = useSession()
 
     return (
-        <div className="bg-slate-800 px-4 my-10 text-white rounded-xl overflow-hidden">
+        <div className="bg-slate-800 px-4 my-10 text-white rounded-xl overflow-scroll">
             <pre className='py-10'>
                 {JSON.stringify(data, null, 2)}
             </pre>
         </div>
     )
-}
+} 
 
 export default UserData
